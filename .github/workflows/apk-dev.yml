@@ -52,7 +52,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Build with Expo Application Services
-        run: expo build:android -t apk --local
+        run: expo build -p android --local
 
       - name: Download APK artifact
         uses: actions/upload-artifact@v2
