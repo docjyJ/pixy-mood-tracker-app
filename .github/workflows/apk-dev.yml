@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '17'
 
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: build apk
+      - name: Build with Expo Application Services
         run: eas build -p android --local
 
       - name: Download APK artifact
